@@ -1,25 +1,34 @@
-import deff as d
-import signin as si
-import signup as su 
-import exit as e
+import deff
+import signin 
+import signup 
+import exit 
 
-def start():
-   while True:
-        d.menu1()
+def start1():
+    while True:
+        deff.menu1()
         any=input("enter: ")
-        if any != "s":
-            d.correct()
+        if any == "s":
+            start2()
+            break
+        elif any=="e":
+            exit.exit()
+            break
         else:
-            d.menu2()
-            entery=input("enter: ")
-            if entery == "1":
-                su.signup()
-                break
-            elif entery =="2":
-                si.signin()
-                break
-            elif entery =="e":
-                e.exit()
-                break
-            else:
-                d.correct()
+            deff.correct()
+
+
+def start2():
+    while True:
+        deff.menu2()
+        entery=input("enter: ")
+        if entery == "1":
+            signup.signup()
+            break
+        elif entery =="2":
+            signin.signin()
+            break
+        elif entery =="e":
+            exit.exit()
+            break
+        else:
+            deff.correct()

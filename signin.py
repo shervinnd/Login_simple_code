@@ -1,8 +1,12 @@
-import deff as d
+import deff 
+import exit
+
 
 def signin():
+   deff.clear()
    print("....sign in section....")
    signin_username()
+
 
 
 
@@ -12,12 +16,16 @@ def signin_username():
       with open("username.txt", "r") as f:
          file_content = f.read().splitlines()
          if username in file_content:
-            d.clear()
+            deff.clear()
             print(True)
             signin_password(username)
             break
+
+         elif username=="exit":
+            exit.exit()
+
          else:
-            d.clear()
+            deff.clear()
             print("your username is not saved or wrong!!")
             
 
@@ -29,11 +37,14 @@ def signin_password(username):
          file_content = f.read().splitlines()
          if password in file_content:
             print(True)
-            d.clear()
+            deff.clear()
             signin_info(username)
             break
+         elif username=="exit":
+            exit.exit()
+
          else:
-            d.clear()
+            deff.clear()
             print("your password is not saved or wrong!!")
 
 

@@ -1,10 +1,11 @@
-import deff as d
-import start as st
+import deff
+import start 
 def exit():
     trust=input("are you sure exit(y/n)? ")
     if trust=="y":
         print("good bye have good day........")
     elif trust=="n":
-        st.start()
+        deff.clear()
+        start.start2()
     else:
-        d.correct()
+        deff.correct()

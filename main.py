@@ -1,7 +1,25 @@
-import deff as d
-import start as st
+import deff
+import start 
+
+
+
 def main():
-   st.start()
+   menu_items = deff.sort_menu(deff.menu_items)
+   start.start1()
+
+
+
+
+
+
+
 
 if __name__=="__main__":
-    main()
+   main()
+
+
+
+
+
+
+# made in by miracle
